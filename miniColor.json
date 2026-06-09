@@ -268,6 +268,11 @@
         }
         ,
         {
+            "name": "OpenAI",
+            "url": "https://raw.githubusercontent.com/S7venYoung/NeTools/master/OpenAI.png"
+        }
+        ,
+        {
             "name": "gemini",
             "url": "https://raw.githubusercontent.com/S7venYoung/QuantumultX/master/Gemini.png"
         }
