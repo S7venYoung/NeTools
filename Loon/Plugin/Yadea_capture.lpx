@@ -1,0 +1,11 @@
+#!name=雅迪智行广告定位
+#!desc=用于定位雅迪智行接口。启用后打开 App，查看 Loon 脚本记录，把包含 splash/banner/popup/ad/advert/promotion/marketing 的日志发回来再做精准去广告。
+#!author=Codex
+#!tag=调试
+
+[Script]
+http-request ^https?:\/\/(?:[^\/]+\.)?(?:yadea\.com|yadea\.com\.cn|yadea\.net|yadeaapp\.com)\/ script-path=https://raw.githubusercontent.com/S7venYoung/NeTools/refs/heads/main/js/Yadea_capture.js, requires-body=true, timeout=10, tag=雅迪智行请求定位
+http-response ^https?:\/\/(?:[^\/]+\.)?(?:yadea\.com|yadea\.com\.cn|yadea\.net|yadeaapp\.com)\/ script-path=https://raw.githubusercontent.com/S7venYoung/NeTools/refs/heads/main/js/Yadea_capture.js, requires-body=true, timeout=10, tag=雅迪智行响应定位
+
+[MitM]
+hostname=*.yadea.com, *.yadea.com.cn, *.yadea.net, *.yadeaapp.com
