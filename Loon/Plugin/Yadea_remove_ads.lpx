@@ -7,7 +7,21 @@
 DOMAIN, argo.yadeaiot.com.cn, REJECT
 
 [Rewrite]
+# 开屏、弹窗、运营位
+^https:\/\/gw\.yadeaiot\.com\.cn\/api\/app\/system\/pop-window-operation\/pop-position reject-dict
 ^https:\/\/gw\.yadeaiot\.com\.cn\/api\/app\/system\/operation-position\/v2\/pic-video-url\/list reject-dict
+
+# 发现页内容
+^https:\/\/gw\.yadeaiot\.com\.cn\/api\/app\/blog\/ reject-dict
+
+# 商城页内容
+^https:\/\/gw\.yadeaiot\.com\.cn\/api\/app\/mall\/selectMallFirstPage reject-dict
+
+# 服务页内容
+^https:\/\/gw\.yadeaiot\.com\.cn\/api\/app\/system\/service-mod\/queryGeneralServiceModInfo reject-dict
+^https:\/\/gw\.yadeaiot\.com\.cn\/api\/app\/activityStoreServiceStation\/queryStationESInfo reject-dict
+
+# 疑似远程配置/跳转配置
 ^https:\/\/gw\.yadeaiot\.com\.cn\/api\/app\/dLink\/batch\/get reject-dict
 ^https:\/\/gw\.yadeaiot\.com\.cn\/api\/app\/userappruleinfo\/queryuserappruleinfobyuserid reject-dict
 
